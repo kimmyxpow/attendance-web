@@ -3,13 +3,14 @@
 namespace App\Http\Controllers\Api\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 
 class PasswordController extends Controller
 {
-    // use SendsPasswordResetEmails;
+    use SendsPasswordResetEmails;
 
     public function reset(Request $request)
     {
